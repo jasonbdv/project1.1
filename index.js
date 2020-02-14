@@ -1,10 +1,15 @@
-//object creation using object literal
+//object creation using factory function
 
-let juan = {name: "juan dela cruz", age: "20", school:"UST", 
-speak:function(language){
-    document.write(`${this.name} can speak ${language}`);
-}}
+function createStudent(name, section){
+    let stud = {};
+    stud.name = name;
+    stud.section = section;
+    return stud;
+}
 
-juan.speak("ENGLISH");
+let juan = createStudent("juan dela cruz", "2ITH");
 
-let x = 6;
+let pedro = createStudent("pedro fernandez", "2ITA")
+
+document.write(`${juan.name} is enrolled in section ${juan.section}`);
+document.write(`${pedro.name} is enrolled in section ${pedro.section}`);
