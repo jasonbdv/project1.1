@@ -1,11 +1,14 @@
-// Document object
+class Ibon{
+    constructor(name, wingspan){
+        this.name = name;
+        this.wingspan = wingspan;
+    }
 
-let animal = {kind: "Mammal", type:"Dog", breed:"Golden Retriever"};
-
-let arr = [this.kind, this.type, this.breed];
-
-let displayAnimal = function(kind, type, breed){
-    document.write(`kind: ${this.kind}, type: ${this.type}, breed: ${this.breed}`);
+    static lipad (distansya) {
+        console.log(`Ang ${this.name} ay nakakalipad ng ${distansya} miles...`)
+    }
 }
 
-displayAnimal.apply(animal, arr);
+let bird1 = new Ibon("Agila", 1.5);
+
+Ibon.lipad(1000);
