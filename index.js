@@ -1,18 +1,11 @@
-// prototype 
+// Document object
 
-function Student(name, section){
-    this.name = name;
-    this.section = section;
+let animal = {kind: "Mammal", type:"Dog", breed:"Golden Retriever"};
+
+let arr = [this.kind, this.type, this.breed];
+
+let displayAnimal = function(kind, type, breed){
+    document.write(`kind: ${this.kind}, type: ${this.type}, breed: ${this.breed}`);
 }
 
-Student.prototype.fullname = function(){
-    return (this.name + " is enrolled in section " + this.section +"<br>");
-}
-
-Student.prototype.school = "UST";
-
-let stud1 = new Student("Juan Dela Cruz", "1ITE");
-let stud2 = new Student("Roger Raker", "4ITC");
-
-document.write(stud2.fullname());
-document.write(`${stud2.name} is studying in ${stud2.school}`);
+displayAnimal.apply(animal, arr);
