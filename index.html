@@ -8,8 +8,10 @@
 <body>
     <form>
         <label>Email: <input type="email"></label>  <br><br>
-        <label>Password:  <input type="password"></label> <br><br>
-        <input type="submit" value="Submit to Server">
+        <label>Credit card no. <input type="text" pattern="[0-9]{13,16}"></label> <br> <br>
+        <label>Enter a number [1-10]: <input type="number" min="1" max="10" step="2"></label> <br> <br>
+        <label>Password:  <input type="password" required></label> <br><br>
+        <input type="submit" value="Submit to Server"> <br>
     </form>
 </body>
 </html>
