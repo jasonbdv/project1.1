@@ -1,18 +1,18 @@
-//object creation using ECMAScript 6 (ES6) syntax
+// prototype 
 
-class Student{
-    constructor(name, course, section){
-        this.name = name;
-        this.course = course;
-        this.section = section;
-    }
-
-    speak = function(language){
-        document.write(`${this.name} can speak ${language}`)
-    }
+function Student(name, section){
+    this.name = name;
+    this.section = section;
 }
 
-let stud1 = new Student("Juan Dela Cruz", "IT", "2ITA");
-let stud2 = new Student("Pedro Hernandez", "CS", "2CSB");
+Student.prototype.fullname = function(){
+    return (this.name + " is enrolled in section " + this.section +"<br>");
+}
 
-stud2.speak("Visaya");
+Student.prototype.school = "UST";
+
+let stud1 = new Student("Juan Dela Cruz", "1ITE");
+let stud2 = new Student("Roger Raker", "4ITC");
+
+document.write(stud2.fullname());
+document.write(`${stud2.name} is studying in ${stud2.school}`);
