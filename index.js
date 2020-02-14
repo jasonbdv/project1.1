@@ -1,15 +1,13 @@
-//object creation using factory function
+//object creation using constructor function
 
-function createStudent(name, section){
-    let stud = {};
-    stud.name = name;
-    stud.section = section;
-    return stud;
+function Student(name, section){
+    this.name = name;
+    this.section = section;
+    this.speak = function(language){
+        document.write(`${this.name} can speak ${language}`);
+    }
+
 }
 
-let juan = createStudent("juan dela cruz", "2ITH");
-
-let pedro = createStudent("pedro fernandez", "2ITA")
-
-document.write(`${juan.name} is enrolled in section ${juan.section}`);
-document.write(`${pedro.name} is enrolled in section ${pedro.section}`);
+let stud1 = new Student("Juan Dela Cruz", "2ITA");
+stud1.speak("chingchong");
